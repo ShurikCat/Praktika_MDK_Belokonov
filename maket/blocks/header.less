@@ -1,0 +1,88 @@
+// main: ../main.less
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 0 15px;
+    
+    transition: .3s;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    padding: 25px 15px;
+
+    border-bottom: solid white 1px;
+}
+
+.logo {
+    font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.nav__item {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #adadad;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 30px;
+    transition: color 0.2s linear;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.nav__item--active {
+    color: white;
+}
+
+.fixed {
+    background-color: white;
+    z-index: 1000;
+    
+    transition: .5s;
+    
+    & .header__inner {
+        padding: 10px 15px;
+        border-bottom: none;
+    }
+    
+    & .nav__item {
+        color: gray;
+    }
+    
+    & .logo {
+        color: black;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .nav__item {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+// main: ../main.less
+
+.intro {
+    height: 93vh;
+    width: 100%;
+
+    margin-bottom: 100px;
+
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.intro__inner {
+    padding-top: 330px;
+    padding-left: 10px;
+    width: 600px;
+
+    & .time {
+        text-transform: uppercase;
+        color: #b5b1b1;
+    }
+
+    & .title {
+        display: block;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 3rem;
+        text-decoration: none;
+    }
+
+    & .read_more {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #eb465f;
+
+        transition: color .4s linear;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro__inner {
+        width: 400px;
+    }
+}
+
+@media (max-width: 420px) {
+    .intro__inner {
+        width: 300px;
+    }
+}
